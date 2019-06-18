@@ -253,6 +253,26 @@ g:ale_python_isort_use_global                   *g:ale_python_isort_use_global*
   See |ale-integrations-local-executables|
 
 
+g:ale_python_isort_auto_pipenv                  *g:ale_python_isort_auto_pipenv*
+                                                *b:ale_python_isort_auto_pipenv*
+  Type: |Number|
+  Default: `0`
+
+  Detect whether the file is inside a pipenv, and set the executable to `pipenv`
+  if true. This is overridden by a manually-set executable.
+
+
+g:ale_python_isort_change_directory       *g:ale_python_isort_change_directory*
+                                          *b:ale_python_isort_change_directory*
+  Type: |Number|
+  Default: `1`
+
+  If set to `1`, ALE will switch to the directory the Python file being
+  checked with `isort` is in before checking it. This helps `isort` find
+  configuration files more easily. This option can be turned off if you want
+  to control the directory Python is executed from yourself.
+
+
 ===============================================================================
 mypy                                                          *ale-python-mypy*
 
